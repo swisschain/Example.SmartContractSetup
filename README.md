@@ -1,7 +1,7 @@
 * `truffle init`
 * `npm init`
 
-* Add smart contracts
+* Add smart contracts (contracts/Counter.sol)
 
 * Add migration with deploy smart contract (migrations/2_Counter.js)
 
