@@ -24,7 +24,7 @@
       ...,
 
       ropsten: {
-        provider: () => new HDWallet('your private key', `https://ropsten.infura.io/v3/PROJECT_ID`),
+        provider: () => new HDWallet(`${process.env.ETH_PRIVATE_KEY}`, `${process.env.ETH_ROPSTEN_RPC}`),
         network_id: 3,       // Ropsten's id
         gas: 5500000,        // Ropsten has a lower block limit than mainnet
         confirmations: 2,    // # of confs to wait between deployments. (default: 0)
@@ -34,7 +34,7 @@
 
       // Useful for private networks
       private: {
-        provider: () => new HDWallet('your private key', `RPC URL ADDRESS`),
+        provider: () => new HDWallet(`${process.env.ETH_PRIVATE_KEY}`, `${process.env.ETH_PRIVATE_RPC}`),
         network_id: "*",   // This network is yours, in the cloud.
         production: false,   // Treats this network as if it was a public net. (default: false)
         gasPrice: 0
@@ -53,6 +53,9 @@
 * Add to .env file:
 ```
 ETHERSCAN_API_KEY=YOUR_API_KEY
+ETH_PRIVATE_KEY=PRIVATE_KEY
+ETH_PRIVATE_RPC=RPC_HOST
+ETH_ROPSTEN_RPC=https://ropsten.infura.io/v3/YOUR-PROJECT-ID
 ```
 
 * Verify your compilator version in truffle-config.js:

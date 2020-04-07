@@ -36,7 +36,7 @@ module.exports = {
     // },
 
     ropsten: {
-      provider: () => new HDWallet('YOUR_PRIVATE_KEY', `https://ropsten.infura.io/v3/YOUR_PROJECT_ID`),
+      provider: () => new HDWallet(`${process.env.ETH_PRIVATE_KEY}`, `${process.env.ETH_ROPSTEN_RPC}`),
       network_id: 3,       // Ropsten's id
       gas: 5500000,        // Ropsten has a lower block limit than mainnet
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
@@ -46,7 +46,7 @@ module.exports = {
 
     // Useful for private networks
     private: {
-      provider: () => new HDWallet('YOUR_PRIVATE_KEY', `PRIVATE_NETWORK_HOST_RPC`),
+      provider: () => new HDWallet(`${process.env.ETH_PRIVATE_KEY}`, `${process.env.ETH_PRIVATE_RPC}`),
       network_id: "*",   // This network is yours, in the cloud.
       production: false,   // Treats this network as if it was a public net. (default: false)
       gasPrice: 0
