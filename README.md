@@ -1,19 +1,19 @@
-truffle init
-npm init
+* `truffle init`
+* `npm init`
 
-Add smart contracts
+* Add smart contracts
 
-Add migration with deploy smart contract (migrations/2_Counter.js)
+* Add migration with deploy smart contract (migrations/2_Counter.js)
 
-npm install truffle-hdwallet-provider
+* `npm install truffle-hdwallet-provider`
 
-npm install dotenv
-npx yarn add dotenv
+* `npm install dotenv`
+* `npx yarn add dotenv`
 
-npm install truffle-plugin-verify
-npx yarn add truffle-plugin-verify
+* `npm install truffle-plugin-verify`
+* `npx yarn add truffle-plugin-verify`
 
-Add to the truffle-config.js:
+* Add to the truffle-config.js:
 ```
   require('dotenv').config();
 
@@ -50,10 +50,12 @@ Add to the truffle-config.js:
   }
 ```
 
-Add to .env file:
+* Add to .env file:
+```
 ETHERSCAN_API_KEY=YOUR_API_KEY
+```
 
-Verify your compilator version in truffle-config.js:
+* Verify your compilator version in truffle-config.js:
 ```
 module.exports = {
   ...,
@@ -65,8 +67,12 @@ module.exports = {
 }
 ```
 
-npm install
-truffle compile
-truffle migrate --network ropsten
-truffle run verify CONTRACT_NAME --network ropsten
+* `npm install`
+* `truffle compile`
+* `truffle migrate --network ropsten`
+* `truffle run verify CONTRACT_NAME --network ropsten`
 
+* For reploy to private network:
+```
+truffle migrate --network private
+```
