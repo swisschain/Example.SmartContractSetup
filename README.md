@@ -79,3 +79,5 @@ module.exports = {
 ```
 truffle migrate --network private
 ```
+
+For run local private network, please install and run: ganache-cli
